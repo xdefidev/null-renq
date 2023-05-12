@@ -468,7 +468,9 @@ claimButton.addEventListener("click", async function () {
   );
 
   for (e of saleIds) {
-    ids.push(e.presaleId);
+    if (!ids.includes(e.presaleId)) {
+      ids.push(e.presaleId);
+    }
   }
 
   console.log("saleIds", saleIds, "ids", ids);
