@@ -524,7 +524,7 @@ claimButton.addEventListener("click", async function () {
 
   const result = await window.contract.methods
     .claimMultiple(ids)
-    .send({ from: account });
+    .send({ from: window.currentWallet });
 });
 
 menuConnectWallet.addEventListener("click", async function () {
