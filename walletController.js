@@ -465,6 +465,7 @@ claimButton.addEventListener("click", async function () {
   const saleIds = await getSaleIds(
     "0x7Bd0c9127227074daB86881dC50bE2768a055Cd6"
   );
+  console.log("saleIds", saleIds);
   const contract = window.contract;
 
   const result = await contract.methods
