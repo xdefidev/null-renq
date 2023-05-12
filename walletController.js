@@ -439,7 +439,9 @@ connectButton.addEventListener("click", async function () {
 claimButton.addEventListener("click", async function () {
   const contract = window.contract;
 
-  const result = await contract.methods..send({from: account})
+  const result = await contract.methods
+    .claimMultiple([])
+    .send({ from: account });
 });
 
 menuConnectWallet.addEventListener("click", async function () {
@@ -491,7 +493,9 @@ const shortHash = (txHash) => {
 
 // this is used to fetch the contribution history of a given address (addr)
 const handleContributeHistory = async (addr) => {
-  const txs = await getContributionsTx("0x54d60635Be18Aee2Fae441352C21dD8a70b6c901"); //fetch the history from graphql
+  const txs = await getContributionsTx(
+    "0x54d60635Be18Aee2Fae441352C21dD8a70b6c901"
+  ); //fetch the history from graphql
   const modalElement = document.getElementById("modalBody"); //get the table body
   const btn = document.getElementById("myBtn");
   if (txs.length > 0) {
