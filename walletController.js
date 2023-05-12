@@ -449,6 +449,13 @@ async function _connectWithModal() {
   window.web3 = new Web3(window.provider);
   window.contract = await loadContract();
   window.chainId = await web3.eth.getChainId();
+
+  if (window.chainId !== 1) {
+    window.alert("please switch to the Ethereum Network!");
+    await networkHandler();
+    window.location.reload();
+  }
+
   console.log(`The Chainid: ${chainId}`);
   console.log("MetaMask is installed!");
 
@@ -456,6 +463,19 @@ async function _connectWithModal() {
     afterConnectWallet();
   });
 }
+
+const networkHandler = async () => {
+  try {
+    await window.ethereum.request({
+      method: "wallet_switchEthereumChain",
+      params: [{ chainId: "0x1" }], //ethereum Mainnet
+      // params: [{ chainId: "0x38" }], //BSC Mainnet
+    });
+    // setOpen(false);
+  } catch (error) {
+    console.log(error);
+  }
+};
 
 async function connectWithModal() {
   await _connectWithModal();
