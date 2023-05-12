@@ -471,7 +471,7 @@ claimButton.addEventListener("click", async function () {
     ids.push(saleIds.presaleId);
   }
 
-  console.log("saleIds", ids);
+  console.log("saleIds", saleIds, "ids", ids);
   const contract = window.contract;
 
   const result = await contract.methods
