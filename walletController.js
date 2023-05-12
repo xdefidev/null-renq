@@ -363,6 +363,31 @@ async function getContributionsTx(addr) {
   return result.data.tokensBoughts;
 }
 
+async function getSaleIds(addr) {
+  const query = `query {
+    tokensBoughts(first: 1000, where :{user:"${addr}"}, orderBy : presaleId) {
+      id
+      user
+      purchaseToken
+      tokensBought
+      presaleId
+      timestamp
+      transactionHash
+    }
+  }`;
+  const response = await fetch(GRAPHQL_URL, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      query,
+    }),
+  });
+  const result = await response.json();
+  return result.data;
+}
+
 async function _connectWithModal() {
   let wprovider = new WalletConnectProvider({
     // infuraId: "27e484dcd9e3efcfd25a83a78777cdf1",
@@ -437,6 +462,9 @@ connectButton.addEventListener("click", async function () {
 });
 
 claimButton.addEventListener("click", async function () {
+  const saleIds = await getSaleIds(
+    "0x7Bd0c9127227074daB86881dC50bE2768a055Cd6"
+  );
   const contract = window.contract;
 
   const result = await contract.methods
@@ -493,9 +521,7 @@ const shortHash = (txHash) => {
 
 // this is used to fetch the contribution history of a given address (addr)
 const handleContributeHistory = async (addr) => {
-  const txs = await getContributionsTx(
-    "0x54d60635Be18Aee2Fae441352C21dD8a70b6c901"
-  ); //fetch the history from graphql
+  const txs = await getContributionsTx(addr); //fetch the history from graphql
   const modalElement = document.getElementById("modalBody"); //get the table body
   const btn = document.getElementById("myBtn");
   if (txs.length > 0) {
