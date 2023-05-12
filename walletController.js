@@ -418,15 +418,7 @@ async function _connectWithModal() {
     },
     trustwallet: {
       package: WalletConnectProvider,
-      options: {
-        networkUrl:
-          "https://mainnet.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161",
-        network: 1,
-        rpc: {
-          1: "https://mainnet.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161",
-        },
-        chainId: 1,
-      },
+      options: wprovider,
     },
     coinbasewallet: {
       // package: ConnectToCoinbaseWalletSdk,
