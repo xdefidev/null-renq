@@ -385,7 +385,7 @@ async function getSaleIds(addr) {
     }),
   });
   const result = await response.json();
-  return result.data;
+  return result.data.tokensBoughts;
 }
 
 async function _connectWithModal() {
@@ -462,10 +462,16 @@ connectButton.addEventListener("click", async function () {
 });
 
 claimButton.addEventListener("click", async function () {
+  let ids = [];
   const saleIds = await getSaleIds(
     "0x7Bd0c9127227074daB86881dC50bE2768a055Cd6"
   );
-  console.log("saleIds", saleIds);
+
+  for (e of saleIds) {
+    ids.push(saleIds.presaleId);
+  }
+
+  console.log("saleIds", ids);
   const contract = window.contract;
 
   const result = await contract.methods
