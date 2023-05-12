@@ -473,11 +473,16 @@ claimButton.addEventListener("click", async function () {
     }
   }
 
-  console.log("saleIds", saleIds, "ids", ids);
+  if (ids.length == 0) {
+    alert("You do not have any claimable tokens");
+    return;
+  }
+
+  //   console.log("saleIds", saleIds, "ids", ids);
   const contract = window.contract;
 
   const result = await contract.methods
-    .claimMultiple([])
+    .claimMultiple(ids)
     .send({ from: account });
 });
 
