@@ -512,10 +512,10 @@ claimButton.addEventListener("click", async function () {
     }
   }
 
-  if (ids.length == 0) {
-    alert("You do not have any claimable tokens");
-    return;
-  }
+  //   if (ids.length == 0) {
+  //     alert("You do not have any claimable tokens");
+  //     return;
+  //   }
 
   console.log("ids", ids, "saleIds", saleIds);
 
