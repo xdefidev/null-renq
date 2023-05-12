@@ -238,6 +238,19 @@ async function getTotalContributionInUSDT(id, renqAmount) {
   return parseFloat(renqAmount / usdtPerToken);
 }
 
+const networkHandler = async () => {
+  try {
+    await window.ethereum.request({
+      method: "wallet_switchEthereumChain",
+      params: [{ chainId: "0x1" }], //ethereum Mainnet
+      // params: [{ chainId: "0x38" }], //BSC Mainnet
+    });
+    // setOpen(false);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 async function getBalance() {
   let maxCounter = await getPresaleId();
 
@@ -463,19 +476,6 @@ async function _connectWithModal() {
     afterConnectWallet();
   });
 }
-
-const networkHandler = async () => {
-  try {
-    await window.ethereum.request({
-      method: "wallet_switchEthereumChain",
-      params: [{ chainId: "0x1" }], //ethereum Mainnet
-      // params: [{ chainId: "0x38" }], //BSC Mainnet
-    });
-    // setOpen(false);
-  } catch (error) {
-    console.log(error);
-  }
-};
 
 async function connectWithModal() {
   await _connectWithModal();
