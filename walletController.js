@@ -478,6 +478,8 @@ claimButton.addEventListener("click", async function () {
     return;
   }
 
+  console.log("ids", ids, "saleIds", saleIds);
+
   //   console.log("saleIds", saleIds, "ids", ids);
   const contract = window.contract;
 
