@@ -416,6 +416,30 @@ async function _connectWithModal() {
       package: WalletConnectProvider,
       options: wprovider,
     },
+    trustwallet: {
+      package: WalletConnectProvider,
+      options: {
+        networkUrl:
+          "https://mainnet.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161",
+        network: 1,
+        rpc: {
+          1: "https://mainnet.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161",
+        },
+        chainId: 1,
+      },
+    },
+    coinbasewallet: {
+      // package: ConnectToCoinbaseWalletSdk,
+      options: {
+        appName: "RenQ",
+        networkUrl:
+          "https://mainnet.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161",
+        rpc: {
+          1: "https://mainnet.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161",
+        },
+        chainId: 1,
+      },
+    },
   };
 
   console.log(Web3Modal.cacheProvider);
@@ -462,6 +486,11 @@ connectButton.addEventListener("click", async function () {
 });
 
 claimButton.addEventListener("click", async function () {
+  if (!window.currentWallet) {
+    alert("Please Connect Wallet");
+    return;
+  }
+
   let ids = [];
   const saleIds = await getSaleIds(window.currentWallet);
 
