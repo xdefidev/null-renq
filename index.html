@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | RenQ Finance </title>
+    <meta name=”robots” content="index, follow">
+    <meta name="description" content="RenQ Finance Dashboard - Check Your RenQ Holdings">
+    <meta name="keywords"
+        content="RenQ, renq, RenQ Finance, RenQ Finance Presale, Presale, ICO, IEO, IDO, renq finance, renq finance presale, RENQ Token, $RENQ">
+
+    <meta property="og:site_name" content="Dashboard | RenQ Finance">
+    <meta property="og:url" content="https://renq.io/dashboard/">
+    <meta property="og:title" content="Dashboard | RenQ Finance">
+    <meta property="og:type" content="website">
+    <meta name="author" content="RenQFinance">
+    <meta property="og:description" content="RenQ Finance Dashboard - Check Your RenQ Holdings">
+    <meta property="og:image" content="https://renq.io/images/main.jpg">
+    <meta property="og:image:secure_url" content="https://renq.io/images/main.jpg">
+    <meta name="twitter:site" content="@RenQ_Finance">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dashboard | RenQ Finance">
+    <meta name="twitter:image" content="https://renq.io/images/main.jpg">
+    <meta name="twitter:description" content="RenQ Finance Dashboard - Check Your RenQ Holdings">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://renq.io/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://renq.io/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://renq.io/favicon/favicon-16x16.png">
+    <link rel="manifest" href="https://renq.io/favicon/site.webmanifest">
+
+    <meta name="theme-color" content="#000000" />
+
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bignumber.js/8.0.2/bignumber.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/web3modal@1.9.12/dist/index.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/@walletconnect/web3-provider"></script>
+    </script>
+
+    <script type="text/javascript" src="https://unpkg.com/fortmatic@2.0.6/dist/fortmatic.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/fontawesome.min.css"
+        integrity="sha512-giQeaPns4lQTBMRpOOHsYnGw1tGVzbAIHUyHRgn7+6FmiEgGGjaG0T2LZJmAPMzRCl+Cug0ItQ2xDZpTmEc+CQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/brands.min.css"
+        integrity="sha512-G/T7HQJXSeNV7mKMXeJKlYNJ0jrs8RsWzYG7rVACye+qrcUhEAYKYzaa+VFy6eFzM2+/JT1Q+eqBbZFSHmJQew=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./modalStyle.css" />
+    <link rel="stylesheet" href="https://renq.io/app/dist/app.css">
+    <link rel="stylesheet" href="https://renq.io/html/footer.css">
+    <link rel="stylesheet" href="https://renq.io/app/dist/swiper-bundle.min.css" />
+    <!-- end Styles -->
+
+    <!-- Favicon and Touch Icons  -->
+    <link rel="shortcut icon" href="https://renq.io/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="https://renq.io/favicon.ico">
+
+    <div class="gtranslate_wrapper"></div>
+    <script>window.gtranslateSettings = { "default_language": "en", "languages": ["en", "fr", "de", "it", "es", "nl", "pt", "zh-CN", "tr", "ar", "ko", "zh-TW", "ja", "ru", "hi", "pl", "cs", "hu", "id", "bg", "th", "ro", "vi", "sk"], "wrapper_selector": ".gtranslate_wrapper", "flag_size": 24, "flag_style": "3d", "alt_flags": { "en": "usa" }, "switcher_text_color": "#f7f7f7", "switcher_arrow_color": "#f2f2f2", "switcher_border_color": "#161616", "switcher_background_color": "#303030", "switcher_background_shadow_color": "#474747", "switcher_background_hover_color": "#3a3a3a", "dropdown_text_color": "#eaeaea", "dropdown_hover_color": "#748393", "dropdown_background_color": "#474747" }</script>
+    <script src="https://cdn.gtranslate.net/widgets/v1.0.0/dwf.js" defer></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'G-TFCK003EYW');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'G-TBQFGP9S27');
+    </script>
+    <!-- End Google Tag Manager -->
+
+</head>
+
+<body>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modalContent">
+            <table class="table" style="background-color : rgb(33, 4, 70, 0.8); color:white">
+                <thead>
+                    <tr>
+                        <th style="color: #e84d8c;" scope="col">ID</th>
+                        <th style="color: #e84d8c;" scope="col">Buy (USD)</th>
+                        <th style="color: #e84d8c;" scope="col">Claim</th>
+                        <th style="color: #e84d8c;" scope="col">Tx</th>
+                    </tr>
+                </thead>
+                <tbody id="modalBody">
+                </tbody>
+            </table>
+            <div style="display: flex; flex-direction: row; width: 100%;">
+                <button class="modalCloseButton" id="close">Close</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Header -->
+    <header id="header_main" class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="header__body">
+                        <div class="header__logo">
+                            <a href="https://renq.io/">
+                                <img id="site-logo" src="https://renq.io/images/logo.png" alt="Renq" width="165"
+                                    height="40" data-retina="https://renq.io/images/logo.png" data-width="165"
+                                    data-height="40">
+                            </a>
+                        </div>
+
+                        <div class="header__right">
+                            <nav id="main-nav" class="main-nav">
+                                <ul id="menu-primary-menu" class="menu">
+                                    <li class="menu-item">
+                                        <a href="https://renq.io/">Home</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="https://renq.io/whitepaper.pdf">Whitepaper</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="https://renq.io/win-250k">WIN 250k</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="https://renq.io/how-to-buy">How To Buy</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="https://renq.io/contact/">Contact Us</a>
+                                    </li>
+
+                                </ul>
+                            </nav>
+                            <div class="group-button" id='menu-connect-wallet'>
+                                <a class="btn-action">
+                                    <span id='text-menu-connect-wallet'>Connect Wallet</span>
+                                </a>
+                            </div>
+                            <div class="mobile-button"><span></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <script>
+        function myFunction() {
+            alert("Token Claim Will Start Once Presale Is Completed");
+        }
+    </script>
+
+    <!-- Banner Top -->
+    <section class="banner-top style-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-md-12">
+                    <div class="banner-top__content">
+                        <h2 class="title">RenQ Dashboard</h2>
+                        <p id='title-connect-wallet' class="desc">Connect Wallet To Check Your Holdings.</p>
+                        <p class="desc">NOTE: $RENQ tokens will be available for claim once presale has finished.
+                        </p>
+                        <div class="button" id="connect-wallet">
+                            <a class="btn-action style-2 text-connect-wallet"><span id="text-connect-wallet">Connect
+                                    Wallet</span><span class="icon-arrow"></span></a>
+                        </div><br><br>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-md-12">
+                    <div class="banner-top__sale">
+                        <div class="sale-content">
+                            <p>
+                                <span style="font-size: 0.9em;" id='text-address'></span>
+                            </p>
+                            <h3 id='title-holdings'>To Check Your Holdings</h3>
+                            <h2 id='text-amount-tokens'>Connect Wallet</h2>
+                            <h3 id='title-contribution' style="margin-top: 5rem;" hidden>Your Total Contribution</h3>
+                            <h2 id='text-amount-contribution'></h2>
+                            <h5 id="myBtn" hidden class="chistory"><u>Contribution History</u></h5>
+                            <div class="token-bar">
+                                <center>
+                                    <h6 id='sold-text'>SOLD - ∞<span style="font-size: 20px;">/</span>∞</h6>
+                                    <h6 id='raised-text'>RAISED - $∞<span style="font-size: 20px;">/</span>$∞</h6>
+                                    <br>
+                                </center>
+                                <div class="main">
+                                    <div class="progress-token-hold">
+                                        <p id='progress-bar' class="fs-14">-%</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <center><br><br>
+                                <a class="btn-action style-2" id="claim-button"><span>Claim Tokens</span><span
+                                        class="icon-arrow"></span></a>
+                            </center>
+                            <div class="sale-bottom">
+                                <ul class="list-coin">
+                                    <li><img src="/static/media/usdt.c1d587669942a5e9bc47.png" alt=""
+                                            style="width: 30px; height: 30px;"></li>
+                                    <li><img src="/static/media/eth.c09fb332240c7847b034.png" alt=""
+                                            style="width: 30px; height: 30px;"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+    </section>
+
+    <script src="walletController.js?=06112"></script>
+
+    <footer class="footer style-1">
+        <div class="footer__top">
+            <div class="container">
+                <div class="row">
+                    <center>
+                        <img src="https://renq.io/html/3.gif" width="350" height="90" alt="Renq"><br><br>
+
+                        <button class="btn-action style-2"><span class="effect"><a href="https://renq.io/">Join
+                                    Presale</span></button></a><br>
+                        <br><br>
+                    </center>
+
+                    <div class="col-xl-7 col-md-12">
+                        <div class="content-left">
+                            <h5 class="fs-22">Stay updated</h5>
+                            <p>Subscribe to get latest updates about RenQ's Finance</p>
+
+                            <form method="POST" id="subscribe-form">
+                                <input type="email" placeholder="Enter your email" id="subscribe-email" name="emaill"
+                                    class="form-control" required="">
+                                <button class="btn-action style-2" type="submit" id="subscribe-button"> <span
+                                        class="effect">SUBSCRIBE</span></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 col-md-12">
+                        <div class="content-right">
+                            <h5 class="fs-22">Join Our Community</h5>
+                            <ul class="list-social">
+                                <li><a href="https://twitter.com/RenQ_Finance" target="_blank"><span
+                                            class="icon-twitter"></span></a></li>
+                                <li><a href="https://t.me/renqfinance" target="_blank"><span
+                                            class="icon-telegram"></span></a></li>
+                                <li><a href="https://www.facebook.com/renqfinance" target="_blank"><span
+                                            class="icon-facebook"></span></a></li>
+                                <li><a href="https://www.instagram.com/renqfinance/" target="_blank"><span
+                                            class="icon-Instagram"></span></a></li>
+                                <li><a href="https://www.youtube.com/@renqfinance" target="_blank"><span
+                                            class="icon-youtobe"></span></a></li>
+                                <li><a href="https://www.reddit.com/r/renq" target="_blank"><span
+                                            class="icon-reddit"></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <footer class="footer style-x">
+        <div class="container"> <br><br>
+            <div class="row">
+                <div class="col-xl-6 col-md-6">
+                    <div class="info">
+                        <img src="https://renq.io/images/logo.png" width="165" height="40" alt="Renq">
+                        <p class="fs-20">
+                            RENQ LIMITED<br>
+                            Registration Number: 236483<br>
+                            Mahe, Seychelles
+                        </p>
+                        <p class="fs-20">
+                            <!-- Email Us: <a href="mailto:support@renq.io"> support@renq.io</a> -->
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-6">
+                    <div class="footer-link s1">
+                        <h5 class="title">Resources</h5>
+                        <ul class="list-link">
+                            <li><a href="https://renq.io/contact/">Contact Us</a></li>
+                            <li><a href="https://renq.io/new-to-crypto">New
+                                    To Crypto</a></li>
+                            <li><a href="https://renq.io/audit.pdf">Audit</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-6">
+                    <div class="footer-link s3">
+                        <h5 class="title">Agreements</h5>
+                        <ul class="list-link">
+                            <li><a href="https://renq.io/terms.pdf">Terms & Conditions</a></li>
+                            <li><a href="https://renq.io/privacy.pdf">Privacy Policy </a></li>
+                            <li><a href="https://renq.io/cookies.pdf">Cookies</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom center">
+            <div class="container">
+                <div class="row"><br><br>
+                    <div class="col-md-12"><br><br>
+                        <p>Copyright © 2023 - <a href="https://renq.io">Renq Finance</a> All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://renq.io/app/js/jquery.min.js"></script>
+    <script src="https://renq.io/app/js/jquery.easing.js"></script>
+    <script src="https://renq.io/app/js/app.js"></script>
+    <script src="https://renq.io/app/js/mouse.js"></script>
+
+    <!-- Start of LiveChat (www.livechat.com) code -->
+    <script>
+        window.__lc = window.__lc || {};
+        window.__lc.license = 15093564;
+        ; (function (n, t, c) { function i(n) { return e._h ? e._h.apply(null, n) : e._q.push(n) } var e = { _q: [], _h: null, _v: "2.0", on: function () { i(["on", c.call(arguments)]) }, once: function () { i(["once", c.call(arguments)]) }, off: function () { i(["off", c.call(arguments)]) }, get: function () { if (!e._h) throw new Error("[LiveChatWidget] You can't use getters before load."); return i(["get", c.call(arguments)]) }, call: function () { i(["call", c.call(arguments)]) }, init: function () { var n = t.createElement("script"); n.async = !0, n.type = "text/javascript", n.src = "https://cdn.livechatinc.com/tracking.js", t.head.appendChild(n) } }; !n.__lc.asyncInit && e.init(), n.LiveChatWidget = n.LiveChatWidget || e }(window, document, [].slice))
+    </script>
+    <noscript><a href="https://www.livechat.com/chat-with/15093564/" rel="nofollow">Chat with us</a>, powered by <a
+            href="https://www.livechat.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
+    <!-- End of LiveChat code -->
+
+
+</body>
+
+</html>

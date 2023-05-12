@@ -1,0 +1,70 @@
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%;
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modalContent {
+  border-radius: 10px;
+  top: 0;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+  border: 2px solid #d918a9;
+  box-shadow: 0px 0px 70px rgb(217, 24, 169, 0.3);
+  width: 85%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modalCloseButton{
+  margin-left: auto; 
+  padding: 5px; 
+  border-radius: 5px; 
+  background-color: #e84d8c; 
+  color: white; 
+  border: 1px solid #e84d8c;
+}
+
+.modalCloseButton:hover{
+    color: #e84d8c;
+    background-color: white;
+}
+
+.txLink{
+  color : black;
+  text-decoration: none;
+}
+
+.chistory{
+  color: blue;
+}
+.chistory:hover{
+  color: #e84d8c;
+  text-shadow: 0px 0px 3px #e84d8c;
+  cursor: pointer;
+}
