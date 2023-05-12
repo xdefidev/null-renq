@@ -468,8 +468,8 @@ claimButton.addEventListener("click", async function () {
   );
 
   for (e of saleIds) {
-    if (!ids.includes(e.presaleId)) {
-      ids.push(e.presaleId);
+    if (e.presaleId && !ids.includes(e.presaleId)) {
+      ids.push(e.presaleId.toNumber());
     }
   }
 
