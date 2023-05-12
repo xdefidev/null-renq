@@ -463,9 +463,7 @@ connectButton.addEventListener("click", async function () {
 
 claimButton.addEventListener("click", async function () {
   let ids = [];
-  const saleIds = await getSaleIds(
-    "0x7Bd0c9127227074daB86881dC50bE2768a055Cd6"
-  );
+  const saleIds = await getSaleIds(window.currentWallet);
 
   for (e of saleIds) {
     if (!ids.includes(parseInt(e.presaleId))) {
