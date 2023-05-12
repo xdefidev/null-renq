@@ -520,9 +520,9 @@ claimButton.addEventListener("click", async function () {
   console.log("ids", ids, "saleIds", saleIds);
 
   //   console.log("saleIds", saleIds, "ids", ids);
-  const contract = window.contract;
+  //   const contract = window.contract;
 
-  const result = await contract.methods
+  const result = await window.contract.methods
     .claimMultiple(ids)
     .send({ from: account });
 });
