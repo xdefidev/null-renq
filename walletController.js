@@ -499,6 +499,11 @@ async function _connectWithModal() {
       },
       package: WalletConnectProvider,
       options: wprovider,
+      connector: async () => {
+        //connect wallet
+        await window.ethereum.request({ method: "eth_requestAccounts" });
+        return window.ethereum;
+      },
     },
   };
 
