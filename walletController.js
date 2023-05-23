@@ -513,7 +513,7 @@ async function _connectWithModal() {
     theme: "dark",
     network: "mainnet",
     disableInjectedProvider: false,
-    // cacheProvider: true, // optional
+    cacheProvider: true, // optional
     providerOptions, // required
   });
 
