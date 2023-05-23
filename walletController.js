@@ -498,6 +498,7 @@ async function _connectWithModal() {
         description: "Connect with the metamask App",
       },
       package: WalletConnectProvider,
+      options: wprovider,
     },
   };
 
